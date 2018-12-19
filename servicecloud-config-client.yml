@@ -1,0 +1,35 @@
+﻿spring:
+	profiles:
+		active: 
+			- dev
+---
+server:
+	port: 7001
+spring:
+	profiles: dev
+	application: 
+		name: servicecloud-config-eureka-client
+eureka
+	instance:
+		hostname: www.lr.com
+	client: 
+		register-with-eureka: false
+		fetch-registry: false
+		service-url:
+			defaultZone: http://www.lr.com:7001/eureka/
+			
+---
+server:
+	port: 7001
+spring:
+	profiles: dev
+	application: 
+		name: servicecloud-config-eureka-client
+eureka
+	instance:
+		hostname: www.lr.com
+	 client:
+	 	registry-with-eureka: false
+	 	fetch-registry: false
+	 	service-url:
+	 		defaultZone: http://www.lr.com:7001/eureka/
